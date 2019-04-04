@@ -15,15 +15,23 @@ public class Memoria {
     int cantidadDeEspacios=64;
 
     public Memoria() {
+        crearArray();
         
     }
     
+    //Crea un array de direcciones
     private void crearArray(){
-    Random rd = new Random(); // creating Random object
+    int [] memoria = new int[cantidadDeEspacios];
+    }
+    
+    private void isVacio
+    /*
+    private void llenarArray(){
+    Random rd = new Random().; // creating Random object
       int [] memoria = new int[cantidadDeEspacios];
       for (int i = 0; i < memoria.length; i++) {
          memoria[i] = rd.nextInt(); // storing random integers in an array
         }
-    }
+    }*/
     
 }
