@@ -1,1 +1,4 @@
 /Código/LabMemoria/nbproject/private/
+*.xml
+*.mf
+*.properties
