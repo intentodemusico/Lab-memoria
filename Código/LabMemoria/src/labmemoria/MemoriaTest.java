@@ -24,7 +24,7 @@ public class MemoriaTest {
     int [] memoria = new int[cantidadDeEspacios];
     }
     
-    private void isVacio
+    private void isVacio(){
     /*
     private void llenarArray(){
     Random rd = new Random().; // creating Random object
