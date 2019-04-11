@@ -15,6 +15,5 @@ public class Memoria extends LinkedList<Espacio>{
     
     public Memoria(){
         
-    }
-    
+    }   
 }
