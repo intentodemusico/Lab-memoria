@@ -11,14 +11,14 @@ import java.util.Random;
  *
  * @author INTENTODEMUSICO
  */
-public class Memoria {
+public class MemoriaTest {
     int cantidadDeEspacios=64;
 
-    public Memoria() {
+    public MemoriaTest() {
         crearArray();
         
     }
-    ///holasdajsndjsdakasj
+    
     //Crea un array de direcciones
     private void crearArray(){
     int [] memoria = new int[cantidadDeEspacios];
