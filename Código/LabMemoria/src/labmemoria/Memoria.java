@@ -18,7 +18,7 @@ public class Memoria {
         crearArray();
         
     }
-    
+    ///holasdajsndjsdakasj
     //Crea un array de direcciones
     private void crearArray(){
     int [] memoria = new int[cantidadDeEspacios];
