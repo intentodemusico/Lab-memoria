@@ -2,3 +2,4 @@
 *.xml
 *.mf
 *.properties
+/Código/Memoria/nbproject/private/
