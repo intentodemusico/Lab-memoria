@@ -9,12 +9,12 @@ import java.util.Random;
  *
  * @author INTENTODEMUSICO
  */
-public class Espacio {
+public class EspacioTest {
     private Random rd = new Random();
     private boolean asignado=false;
     private int id=0;
     private int tamaño;
-    public Espacio() {
+    public EspacioTest() {
         if(quedaLleno()){
             generarId();
         }
