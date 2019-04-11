@@ -4,11 +4,11 @@
  * and open the template in the editor.
  */
 package labmemoria;
-
+import java.util.LinkedList;
 /**
  *
  * @author INTENTODEMUSICO
  */
-public class Memoria {
+public class Memoria extends LinkedList<Espacio>{
     
 }
