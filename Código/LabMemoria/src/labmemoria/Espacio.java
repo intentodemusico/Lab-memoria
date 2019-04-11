@@ -5,19 +5,21 @@
  */
 package labmemoria;
 import java.util.Random;
+
 /**
  *
  * @author INTENTODEMUSICO
  */
 public class Espacio {
     private Random rd = new Random();
-    private boolean asignado=false;
     private int id=0;
     private int tamaño;
-    public Espacio() {
+    
+    public Espacio(int espacioDisponible) {
         if(quedaLleno()){
             generarId();
         }
+        generarTamaño(espacioDisponible);
     }
     
     private boolean quedaLleno(){
@@ -28,16 +30,19 @@ public class Espacio {
     private void generarId(){
      // creating Random object
      while(id==0){
-        id = rd.nextInt(); // storing random integers in an array
+        id = Math.abs(rd.nextInt()); // storing random integers in an array
      }
     }
     
-    private void generarTamaño(){
-    tamaño=rd.nextInt(7)+2;
+    private int generarTamaño(int espacioDisponible){
+        do{
+        tamaño=rd.nextInt(7)+2;
+        }while(espacioDisponible<tamaño);
+        return tamaño;
     }
 
     public boolean isAsignado() {
-        return asignado;
+        return id==0;
     }
 
     public int getId() {

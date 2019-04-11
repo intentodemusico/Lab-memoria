@@ -10,5 +10,11 @@ import java.util.LinkedList;
  * @author INTENTODEMUSICO
  */
 public class Memoria extends LinkedList<Espacio>{
+    int espacios=0;
+    int ocupado=0;
+    
+    public Memoria(){
+        
+    }
     
 }
