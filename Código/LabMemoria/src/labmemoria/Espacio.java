@@ -37,7 +37,7 @@ public class Espacio {
     private int generarTamaño(int espacioDisponible){
         do{
         tamaño=rd.nextInt(7)+2;
-        }while(espacioDisponible<tamaño);
+        }while(espacioDisponible<=tamaño);
         return tamaño;
     }
 
