@@ -10,10 +10,35 @@ import java.util.LinkedList;
  * @author INTENTODEMUSICO
  */
 public class Memoria extends LinkedList<Espacio>{
-    int espacios=0;
-    int ocupado=0;
+    int ocupados, disponible,ite=0;
     
     public Memoria(){
-        
+        reiniciarMemoria();
     }   
+    
+    private void llenarMemoria(){
+        while (disponible!=0) {            
+           Espacio bloque =new Espacio (disponible);
+           //Agregar a la lista enlazada
+           disponible-=bloque.getTamaño(); //Resta tamaño de disponible
+           ocupados++; //Hay más espacios ocupados
+          
+        }
+        if(ocupados<4 || ocupados>32){
+            ite++;
+            reiniciarMemoria();
+        }else{
+            System.out.println("Memoria llenada con éxito en la "+ite+" iteración");
+        }
+    }
+    
+    private void reiniciarMemoria(){
+        reiniciarValores();
+        llenarMemoria();
+    }
+    
+    private void reiniciarValores(){
+        ocupados=0;
+        disponible=64;
+    }
 }
