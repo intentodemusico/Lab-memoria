@@ -17,6 +17,7 @@ public class LabMemoria {
     public static void main(String[] args) {
         Memoria test =new Memoria();
         System.out.println(test.toString());
+        System.out.println(test.pop().getId());
     }
     
 }
