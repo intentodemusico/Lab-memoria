@@ -11,6 +11,8 @@ import java.util.LinkedList;
  * @author INTENTODEMUSICO
  */
 public class Memoria extends LinkedList<Espacio>{
+
+    
     int ocupados, espacioDisponible,iteracionLlenado=0;
     private int [] vectorMemoria;
     public Memoria(){
@@ -26,7 +28,7 @@ public class Memoria extends LinkedList<Espacio>{
            }
            espacioDisponible-=bloque.getTamaño(); //Resta tamaño de espacioDisponible
            ocupados++; //Hay más espacios ocupados
-          
+           this.add(bloque);
         }
         if(ocupados<4 || ocupados>32){
             iteracionLlenado++;
@@ -49,4 +51,18 @@ public class Memoria extends LinkedList<Espacio>{
     
     public String toString(){return Arrays.toString(vectorMemoria);}
     
+    public String toString(){
+        return Arrays.toString(vectorMemoria);
+    }
+    
+@Override
+    public boolean add(Espacio e) {
+        return super.add(e); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    
+    public Espacio pop() {
+        return super.pop(); //To change body of generated methods, choose Tools | Templates.
+    }
 }
