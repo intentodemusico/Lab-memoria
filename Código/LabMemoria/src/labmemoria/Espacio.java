@@ -14,7 +14,7 @@ public class Espacio {
     private Random rd = new Random();
     private int id=0;
     private int tamaño;
-    
+    private int inicio;
     public Espacio(int espacioDisponible) {
         if(quedaLleno()){
             generarId();
@@ -51,6 +51,14 @@ public class Espacio {
 
     public int getTamaño() {
         return tamaño;
+    }
+
+    public int getInicio() {
+        return inicio;
+    }
+
+    public void setInicio(int inicio) {
+        this.inicio = inicio;
     }
     
 }
