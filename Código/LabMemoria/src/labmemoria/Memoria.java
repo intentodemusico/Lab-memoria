@@ -84,7 +84,11 @@ public class Memoria extends LinkedList<Espacio> {
     public Espacio remove(int i) {
         return super.remove(i); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
+    @Override
+    public boolean remove(Object o) {
+        return super.remove(o); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }
