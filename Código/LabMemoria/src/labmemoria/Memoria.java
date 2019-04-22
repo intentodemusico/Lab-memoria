@@ -119,7 +119,27 @@ public class Memoria extends LinkedList<Espacio> {
         }
         return super.remove(o); //To change body of generated methods, choose Tools | Templates.
     }
-
+        
+    public boolean compactarHuecos(){
+        for (Espacio thi : listaProcesosAAsignar) {
+            if(thi.getId()==0 && thi.getNext().getId()==0){
+                Espacio aux= thi.getNext();
+                remove(thi.getNext());
+                thi.setNext(aux.getNext())
+            }
+        }
+        return true;
+    }
+            
+    public boolean setVacio(Espacio o) {
+        for (int thi : vectorMemoria) {
+            if(thi==o.getId()){
+                thi=0;
+            }
+        }
+        return o.setVacio(); //To change body of generated methods, choose Tools | Templates.
+    }
+        
     @Override
     public int size() {
         return super.size(); //To change body of generated methods, choose Tools | Templates.
