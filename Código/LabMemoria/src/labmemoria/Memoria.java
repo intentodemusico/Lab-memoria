@@ -45,4 +45,6 @@ public class Memoria extends LinkedList<Espacio>{
         ocupados=0;
         espacioDisponible=64;
     }
+    
+
 }

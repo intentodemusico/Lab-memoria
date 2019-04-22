@@ -15,7 +15,8 @@ public class LabMemoria {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        Memoria test =new Memoria();
+        System.out.println(test.toString());
     }
     
 }
