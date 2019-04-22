@@ -5,15 +5,18 @@
  */
 package labmemoria;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Random;
 
 /**
  *
  * @author INTENTODEMUSICO
  */
 public class Memoria extends LinkedList<Espacio> {
-
+    private Random rd = new Random();
     int ocupados, espacioDisponible, iteracionLlenado = 0;
     private int[] vectorMemoria;
 
@@ -35,7 +38,17 @@ public class Memoria extends LinkedList<Espacio> {
             System.out.println("Memoria llenada con éxito en la " + iteracionLlenado + " iteración");
         }
     }
-
+    
+    private void crearListaProcesosAAsignar(){
+    List<Espacio> listaProcesosAAsignar = new ArrayList<Espacio>();
+    int cantidad=rd.nextInt(6)+10;
+        for (int i = 0; i < cantidad; i++) {
+            Espacio bloque = new Espacio(espacioDisponible);
+            listaProcesosAAsignar.add(bloque);
+            //agregarAMemoria(bloque);
+        }
+    }
+    
     private void agregarAMemoria(Espacio bloque) {
         for (int i = bloque.getInicio(); i < bloque.getInicio() + bloque.getTamaño(); i++) {
             vectorMemoria[i] = bloque.getId(); //hasta vector[ocupados+bloque.getTamaño()-1]
@@ -88,5 +101,5 @@ public class Memoria extends LinkedList<Espacio> {
     public Espacio remove(int i) {
         return super.remove(i); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }
