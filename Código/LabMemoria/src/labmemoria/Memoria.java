@@ -19,7 +19,7 @@ public class Memoria extends LinkedList<Espacio> {
     private Random rd = new Random();
     int ocupados, espacioDisponible, iteracionLlenado = 0;
     private int[] vectorMemoria;
-
+    List<Espacio> listaProcesosAAsignar;
     public Memoria() {
         reiniciarMemoria();
     }
@@ -40,7 +40,7 @@ public class Memoria extends LinkedList<Espacio> {
     }
     
     private void crearListaProcesosAAsignar(){
-    List<Espacio> listaProcesosAAsignar = new ArrayList<Espacio>();
+    listaProcesosAAsignar = new ArrayList<Espacio>();
     int cantidad=rd.nextInt(6)+10;
         for (int i = 0; i < cantidad; i++) {
             Espacio bloque = new Espacio(espacioDisponible);
@@ -57,6 +57,10 @@ public class Memoria extends LinkedList<Espacio> {
         ocupados++; //Hay más espacios ocupados
     }
 
+    private int cantidadDeProcesosAEliminar(){
+        int cantidad=rd.nextInt(4)+2;
+        return cantidad;
+    }
     private void reiniciarMemoria() {
         reiniciarValores();
         llenarMemoria();
