@@ -19,7 +19,11 @@ public class Espacio {
         if(quedaLleno()){
             generarId();
         }
+        if(espacioDisponible==1){
+            tamaño=1;
+        }else{
         generarTamaño(espacioDisponible);
+        }
         inicio=64-espacioDisponible;
     }
     
