@@ -10,17 +10,18 @@ import java.util.LinkedList;
  * @author INTENTODEMUSICO
  */
 public class Memoria extends LinkedList<Espacio>{
-    int ocupados, disponible,ite=0;
-    
+    int ocupados, espacioDisponible,ite=0;
+    private int [] vectorMemoria;
     public Memoria(){
         reiniciarMemoria();
     }   
     
     private void llenarMemoria(){
-        while (disponible!=0) {            
-           Espacio bloque =new Espacio (disponible);
+        while (espacioDisponible!=0) {            
+           Espacio bloque =new Espacio (espacioDisponible);
            //Agregar a la lista enlazada
-           disponible-=bloque.getTamaño(); //Resta tamaño de disponible
+           for (int i=bloque.)
+           espacioDisponible-=bloque.getTamaño(); //Resta tamaño de espacioDisponible
            ocupados++; //Hay más espacios ocupados
           
         }
@@ -36,9 +37,10 @@ public class Memoria extends LinkedList<Espacio>{
         reiniciarValores();
         llenarMemoria();
     }
-    
+     vectorMemoria[ocupados] hasta vector[ocupados+bloque.getTamaño()-1]
     private void reiniciarValores(){
+        vectorMemoria=new int[64] ;
         ocupados=0;
-        disponible=64;
+        espacioDisponible=64;
     }
 }
