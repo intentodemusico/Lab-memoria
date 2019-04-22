@@ -64,4 +64,21 @@ public class Memoria extends LinkedList<Espacio> {
     public Espacio pop() {
         return super.pop(); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public Espacio get(int i) {
+        return super.get(i); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Espacio getFirst() {
+        return super.getFirst(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Espacio getLast() {
+        return super.getLast(); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
 }
