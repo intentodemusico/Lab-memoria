@@ -48,5 +48,5 @@ public class Memoria extends LinkedList<Espacio>{
     }
     
     public String toString(){return Arrays.toString(vectorMemoria);}
-
+    
 }
