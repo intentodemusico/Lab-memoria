@@ -60,7 +60,10 @@ public class Espacio {
         tamaño=rd.nextInt(4)+1;
         return tamaño;
     }
-
+    public boolean setVacio(){
+        id=0;
+        return true;
+    }
     public boolean isAsignado() {
         return id==0;
     }
