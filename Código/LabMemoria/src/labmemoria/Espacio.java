@@ -27,7 +27,10 @@ public class Espacio {
         boolean bool=rd.nextBoolean();
         return bool;
     }
-   
+    
+    public boolean esHueco(){
+        return id==0;
+    }
     private void generarId(){
      // creating Random object
      while(id==0){
