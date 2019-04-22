@@ -10,7 +10,7 @@ import java.util.LinkedList;
  * @author INTENTODEMUSICO
  */
 public class Memoria extends LinkedList<Espacio>{
-    int ocupados, espacioDisponible,ite=0;
+    int ocupados, espacioDisponible,iteracionLlenado=0;
     private int [] vectorMemoria;
     public Memoria(){
         reiniciarMemoria();
@@ -28,10 +28,10 @@ public class Memoria extends LinkedList<Espacio>{
           
         }
         if(ocupados<4 || ocupados>32){
-            ite++;
+            iteracionLlenado++;
             reiniciarMemoria();
         }else{
-            System.out.println("Memoria llenada con éxito en la "+ite+" iteración");
+            System.out.println("Memoria llenada con éxito en la "+iteracionLlenado+" iteracionLlenadoración");
         }
     }
     
