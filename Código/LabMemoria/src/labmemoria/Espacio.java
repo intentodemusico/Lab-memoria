@@ -15,6 +15,13 @@ public class Espacio {
     private int id=0;
     private int tamaño;
     private int inicio;
+    
+    public Espacio(){
+        if(quedaLleno()){
+            generarId();
+        }
+        generarTamaño();
+    }
     public Espacio(int espacioDisponible) {
         if(quedaLleno()){
             generarId();
@@ -46,6 +53,11 @@ public class Espacio {
         do{
         tamaño=rd.nextInt(7)+2;
         }while(espacioDisponible<=tamaño);
+        return tamaño;
+    }
+    
+    private int generarTamaño(){
+        tamaño=rd.nextInt(4)+1;
         return tamaño;
     }
 
