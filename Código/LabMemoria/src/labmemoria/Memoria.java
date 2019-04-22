@@ -29,6 +29,7 @@ public class Memoria extends LinkedList<Espacio> {
             Espacio bloque = new Espacio(espacioDisponible);
             agregarAMemoria(bloque);
             //Agregar a la lista enlazada
+            //POner next
             this.add(bloque);
         }
         if (ocupados < 4 || ocupados > 32) {
