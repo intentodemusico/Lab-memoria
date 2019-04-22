@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package labmemoria;
 
 import java.util.ArrayList;
@@ -11,10 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
-/**
- *
- * @author INTENTODEMUSICO
- */
+
 public class Memoria extends LinkedList<Espacio> {
     private Random rd = new Random();
     int ocupados, espacioDisponible, iteracionLlenado = 0;
