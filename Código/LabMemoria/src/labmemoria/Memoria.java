@@ -22,12 +22,12 @@ public class Memoria extends LinkedList<Espacio>{
     private void llenarMemoria(){
         while (espacioDisponible!=0) {            
            Espacio bloque =new Espacio (espacioDisponible);
-           //Agregar a la lista enlazada
            for (int i=bloque.getInicio();i<bloque.getInicio()+bloque.getTamaño();i++){
                vectorMemoria[i]=bloque.getId(); //hasta vector[ocupados+bloque.getTamaño()-1]
            }
            espacioDisponible-=bloque.getTamaño(); //Resta tamaño de espacioDisponible
            ocupados++; //Hay más espacios ocupados
+           //Agregar a la lista enlazada
            this.add(bloque);
         }
         if(ocupados<4 || ocupados>32){
@@ -55,13 +55,12 @@ public class Memoria extends LinkedList<Espacio>{
         return Arrays.toString(vectorMemoria);
     }
     
-@Override
+    @Override
     public boolean add(Espacio e) {
         return super.add(e); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    
     public Espacio pop() {
         return super.pop(); //To change body of generated methods, choose Tools | Templates.
     }
