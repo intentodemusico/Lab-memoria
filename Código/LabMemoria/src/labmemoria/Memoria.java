@@ -81,4 +81,5 @@ public class Memoria extends LinkedList<Espacio> {
     }
     
     
+    
 }
