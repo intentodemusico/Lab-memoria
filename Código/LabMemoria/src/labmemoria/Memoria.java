@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package labmemoria;
+import java.util.Arrays;
 import java.util.LinkedList;
 /**
  *
@@ -31,7 +32,7 @@ public class Memoria extends LinkedList<Espacio>{
             iteracionLlenado++;
             reiniciarMemoria();
         }else{
-            System.out.println("Memoria llenada con éxito en la "+iteracionLlenado+" iteracionLlenadoración");
+            System.out.println("Memoria llenada con éxito en la "+iteracionLlenado+" iteración");
         }
     }
     
@@ -46,5 +47,6 @@ public class Memoria extends LinkedList<Espacio>{
         espacioDisponible=64;
     }
     
+    public String toString(){return Arrays.toString(vectorMemoria);}
 
 }
