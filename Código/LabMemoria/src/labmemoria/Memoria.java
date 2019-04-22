@@ -103,10 +103,20 @@ public class Memoria extends LinkedList<Espacio> {
 
     @Override
     public Espacio remove(int i) {
+        for (int thi : vectorMemoria) {
+            if(thi==i){
+                thi=0;
+            }
+        }
         return super.remove(i); //To change body of generated methods, choose Tools | Templates.
     }
-    @Override
-    public boolean remove(Object o) {
+    
+    public boolean remove(Espacio o) {
+        for (int thi : vectorMemoria) {
+            if(thi==o.getId()){
+                thi=0;
+            }
+        }
         return super.remove(o); //To change body of generated methods, choose Tools | Templates.
     }
 
