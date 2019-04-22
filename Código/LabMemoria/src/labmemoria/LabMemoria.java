@@ -19,7 +19,8 @@ public class LabMemoria {
         System.out.println(test.toString());
         
         System.out.println(test.size());
-      
+
+        
     }
     
 }
