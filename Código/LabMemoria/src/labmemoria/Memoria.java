@@ -20,7 +20,9 @@ public class Memoria extends LinkedList<Espacio>{
         while (espacioDisponible!=0) {            
            Espacio bloque =new Espacio (espacioDisponible);
            //Agregar a la lista enlazada
-           for (int i=bloque.)
+           for (int i=bloque.getInicio();i<bloque.getInicio()+bloque.getTamaño();i++){
+               vectorMemoria[ocupados] hasta vector[ocupados+bloque.getTamaño()-1]
+           }
            espacioDisponible-=bloque.getTamaño(); //Resta tamaño de espacioDisponible
            ocupados++; //Hay más espacios ocupados
           
@@ -37,7 +39,7 @@ public class Memoria extends LinkedList<Espacio>{
         reiniciarValores();
         llenarMemoria();
     }
-     vectorMemoria[ocupados] hasta vector[ocupados+bloque.getTamaño()-1]
+     
     private void reiniciarValores(){
         vectorMemoria=new int[64] ;
         ocupados=0;
