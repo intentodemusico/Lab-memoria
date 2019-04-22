@@ -24,11 +24,7 @@ public class Memoria extends LinkedList<Espacio> {
     private void llenarMemoria() {
         while (espacioDisponible != 0) {
             Espacio bloque = new Espacio(espacioDisponible);
-            for (int i = bloque.getInicio(); i < bloque.getInicio() + bloque.getTamaño(); i++) {
-                vectorMemoria[i] = bloque.getId(); //hasta vector[ocupados+bloque.getTamaño()-1]
-            }
-            espacioDisponible -= bloque.getTamaño(); //Resta tamaño de espacioDisponible
-            ocupados++; //Hay más espacios ocupados
+            agregarAMemoria(bloque);
             //Agregar a la lista enlazada
             this.add(bloque);
         }
@@ -38,6 +34,14 @@ public class Memoria extends LinkedList<Espacio> {
         } else {
             System.out.println("Memoria llenada con éxito en la " + iteracionLlenado + " iteración");
         }
+    }
+
+    private void agregarAMemoria(Espacio bloque) {
+        for (int i = bloque.getInicio(); i < bloque.getInicio() + bloque.getTamaño(); i++) {
+            vectorMemoria[i] = bloque.getId(); //hasta vector[ocupados+bloque.getTamaño()-1]
+        }
+        espacioDisponible -= bloque.getTamaño(); //Resta tamaño de espacioDisponible
+        ocupados++; //Hay más espacios ocupados
     }
 
     private void reiniciarMemoria() {
@@ -84,11 +88,9 @@ public class Memoria extends LinkedList<Espacio> {
     public Espacio remove(int i) {
         return super.remove(i); //To change body of generated methods, choose Tools | Templates.
     }
-
     @Override
     public boolean remove(Object o) {
         return super.remove(o); //To change body of generated methods, choose Tools | Templates.
     }
-    
     
 }
