@@ -20,6 +20,7 @@ public class Espacio {
             generarId();
         }
         generarTamaño(espacioDisponible);
+        inicio=espacioDisponible-64;
     }
     
     private boolean quedaLleno(){
